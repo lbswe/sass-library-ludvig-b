@@ -1,6 +1,54 @@
-@import "./variables";
+@mixin center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-
-@mixin flexCenter {
-    background-color: red;
+@mixin button-style {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
 }
+
+@mixin scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #38b6f1;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 9999;
+    
+    &:hover {
+      background-color: darken(#38b6f1, 10%);
+    }
+  }
+
+  @mixin custom-font1 {
+    font-family:Ravenna ;
+  }
+  @mixin custom-font2 {
+    font-family:Skyward ;
+  }
+  @mixin custom-font3 {
+    font-family:Breath ;
+  }
+  
+
+  @mixin mobile-responsive {
+    @media (max-width: 768px) {
+    }
+  }
+
+  @mixin larger-text {
+    font-size: 200px;
+  }

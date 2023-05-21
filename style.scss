@@ -1,0 +1,101 @@
+@import 'variables'; // importerar mixinsen och dem konstanta variablerna.
+@import 'functions';
+
+body {
+  font-family: Arial, sans-serif; // Den allmänta fonten som inte är för main texten
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px; // textstorleken för h1 eller titeln
+}
+
+.base-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul {
+  @extend .base-list;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #5b02ffec;
+  padding: 20px;
+  @include button-style;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+section {
+  // gör så att texten och bilderna är centrerade i hemsidan och hur stora.
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+#section1 {
+  // använder dem integrerade fontsen som jag fixade nedan
+  @include custom-font1;
+}
+
+#section2 {
+  @include custom-font2;
+}
+
+#section3 {
+  @include custom-font3;
+}
+
+footer {
+  background-color: $primary-color; // använder primary color variablen
+  padding: 20px;
+  color: white; // färgen på texten blir vit så inte den mixas tsm
+
+  .scroll-to-top-button {
+    @include scroll-to-top-button;
+  }
+}
+
+* {
+  @include mobile-responsive; // inkluderar mixin som gör sidan passa bättre på mobil
+}
+
+@font-face {
+  // detta är för integrera olika fonts som är från de olika spelen
+  font-family: Ravenna;
+  src: url(Fonts/Ravenna.ttf);
+}
+
+@font-face {
+  font-family: Skyward;
+  src: url(Fonts/Charlemagne\ Font.ttf);
+}
+
+@font-face {
+  font-family: Breath;
+  src: url(Fonts/The\ Wild\ Breath\ of\ Zelda.ttf);
+}
+
+
+.BOTW {
+  // behövde ändra på font sizen på själva texten.
+  font-size: 30px;
+}

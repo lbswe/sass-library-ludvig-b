@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.base-list, ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: rgba(91, 2, 255, 0.9254901961);
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+header:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#section1 {
+  font-family: Ravenna;
+}
+
+#section2 {
+  font-family: Skyward;
+}
+
+#section3 {
+  font-family: Breath;
+}
+
+footer {
+  background-color: rgba(91, 2, 255, 0.9254901961);
+  padding: 20px;
+  color: white;
+}
+footer .scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #38b6f1;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 9999;
+}
+footer .scroll-to-top-button:hover {
+  background-color: #10a2e6;
+}
+
+@font-face {
+  font-family: Ravenna;
+  src: url(Fonts/Ravenna.ttf);
+}
+@font-face {
+  font-family: Skyward;
+  src: url(Fonts/Charlemagne\ Font.ttf);
+}
+@font-face {
+  font-family: Breath;
+  src: url(Fonts/The\ Wild\ Breath\ of\ Zelda.ttf);
+}
+.BOTW {
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */
